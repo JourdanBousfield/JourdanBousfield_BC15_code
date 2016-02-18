@@ -1,0 +1,40 @@
+int pushButton = 12;
+int trigPin = 8;
+int echoPin = 9;
+
+int soundPin = A0;
+int twistPin = A1;
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  // make the pushbutton's pin an input:
+  pinMode(pushButton, INPUT);
+  pinMode(trigPin, INPUT);
+  pinMode(EchoPin, OUTPUT);
+  
+  pinMode(soundPin, INPUT);
+  pinMode(twistPin, INPUT);
+
+
+  
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  int sensorValue01 = analogRead(A0);
+  int sensorValue02 = analogRead(A1);
+  
+  // print out the value you read:
+  
+  Serial.println("push");
+  Serial.println(buttonState);
+  Serial.println("distance");
+  Serial.println(switchState);
+  Serial.println("sound");
+  Serial.println(soundState);
+  Serial.println("twist");
+  Serial.println(randomState);
+  delay(1);        // delay in between reads for stability
+
+}
